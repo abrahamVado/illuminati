@@ -12,14 +12,8 @@
 				</div>		
 		-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.0/vue.js"></script>
-	<template id="assets_backend" name="CMS status message frontend assets">
-
-		<xpath expr="script[last()]" position="after">
 			<script type="text/javascript" src="/illuminate/static/src/js/vue-google-maps.js"></script>
-			<script type="text/javascript" src="/illuminate/static/src/js/componentes/mapas/ejemplo/index.js"></script>
-		</xpath>
-
-	</template>		
+			<script type="text/javascript" src="/illuminate/static/src/js/componentes/mapas/ejemplo/index.js"></script>		
   <script>
     Vue.use(VueGoogleMaps, {
       load: {
