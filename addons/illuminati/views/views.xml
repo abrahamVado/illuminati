@@ -12,6 +12,8 @@
 				</div>		
 		-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.0/vue.js"></script>
+			<script type="text/javascript" src="/cms_status_message/static/src/js/autodismiss.js"></script>
+			<script type="text/javascript" src="/cms_status_message/static/src/js/tool.js"></script>    
   <script>
     Vue.use(VueGoogleMaps, {
       load: {
