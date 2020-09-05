@@ -2,5 +2,6 @@
 <odoo>
 	<template id="index">
 		<p>example</p>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.0/vue.js"></script>
 	</template>
 </odoo>
