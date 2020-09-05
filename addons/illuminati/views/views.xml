@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-	<template id="index" inherit_id="assets_backend">
+	<template id="index" inherit_id="illuminati.assets_backend">
 		<p>example</p>
 		<!--
 				<div id="root">
@@ -12,8 +12,6 @@
 				</div>		
 		-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.0/vue.js"></script>
-			<script type="text/javascript" src="/illuminate/static/src/js/vue-google-maps.js"></script>
-			<script type="text/javascript" src="/illuminate/static/src/js/componentes/mapas/ejemplo/index.js"></script>		
   <script>
     Vue.use(VueGoogleMaps, {
       load: {
