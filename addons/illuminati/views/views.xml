@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-	<template id="index" inherit_id="web.assets_backend">
+	<template id="index" inherit_id="assets_backend">
 		<p>example</p>
 		<!--
 				<div id="root">
