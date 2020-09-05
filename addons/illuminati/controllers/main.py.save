@@ -1,0 +1,7 @@
+from odoo import http
+
+class exampleClass( http.C
+ontroller ):
+	@http.route('/web/update_order_webhook', type='http', csrf=False, auth="public")
+	def update_order_webhook(self, **kwargs):
+		return Response(json.dumps({"yes":"i am json"}),content_type='application/json;charset=utf-8',status=200)

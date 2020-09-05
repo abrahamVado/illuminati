@@ -1,0 +1,17 @@
+from odoo import http, fields, api
+from odoo.http import Response
+from odoo.http import request
+import json
+
+class exampleClass( http.Controller ):
+	@http.route('/web/update_order_webhook', type='http', csrf=False, auth="public")
+	def update_order_webhook(self, **kwargs):
+		results = request.env['illuminate']
+		raw_data = results.read()
+		return Response(json.dumps(raw_data),content_type='application/json;charset=utf-8',status=20http.route('/web/update_order_webhook', type='http', csrf=False, auth0)
+
+	@http.route('/web/inserta', type='http', csrf=False, auth="public")
+	def inserta(self, **kwargs):
+		request.env['illuminate'].create({ 'name':'abraham' })
+		request.env.cr.commit()
+		return Response(json.dumps({'completo' : 'completo'}))
