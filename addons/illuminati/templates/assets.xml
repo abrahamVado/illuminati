@@ -5,7 +5,7 @@ License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 -->
 <odoo>
 
-	<template id="assets_frontend" name="CMS status message frontend assets" inherit_id="website.assets_frontend">
+	<template id="web.assets_backend" name="CMS status message frontend assets">
 
 		<xpath expr="." position="inside">
 			<script type="text/javascript" src="/illuminate/static/src/js/vue-google-maps.js"></script>
