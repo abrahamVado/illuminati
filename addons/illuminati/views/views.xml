@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-	<template id="index" inherit_id="illuminati.assets_backend">
+	<template id="index">
 		<p>example</p>
 		<!--
 				<div id="root">
