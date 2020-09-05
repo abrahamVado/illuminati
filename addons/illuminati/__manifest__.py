@@ -24,9 +24,9 @@
 
     # always loaded
     'data': [
+        'templates/assets.xml',
         'views/views.xml',
     ],
-    'qweb': ["templates/assets.xml"],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
