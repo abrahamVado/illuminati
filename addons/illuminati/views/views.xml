@@ -11,6 +11,85 @@
 					</gmap-map>    
 				</div>		
 		-->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.0/vue.js"></script>	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.0/vue.js"></script>
+	<template id="assets_backend" name="CMS status message frontend assets">
+
+		<xpath expr="script[last()]" position="after">
+			<script type="text/javascript" src="/illuminate/static/src/js/vue-google-maps.js"></script>
+			<script type="text/javascript" src="/illuminate/static/src/js/componentes/mapas/ejemplo/index.js"></script>
+		</xpath>
+
+	</template>		
+  <script>
+    Vue.use(VueGoogleMaps, {
+      load: {
+        key: 'AIzaSyDf43lPdwlF98RCBsJOFNKOkoEjkwxb5Sc'
+      },
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const app = new Vue({
+        el: '#root',
+        data: {
+          center: {
+            lat: 47.376332,
+            lng: 8.547511
+          },
+          infoWindowPos: null,
+          infoWinOpen: false,
+          currentMidx: null,
+
+          infoOptions: {
+        	content: '',
+            //optional: offset infowindow so it visually sits nicely on top of our marker
+            pixelOffset: {
+              width: 0,
+              height: -35
+            }
+          },
+          markers: [
+          {
+            position: {
+              lat: 47.376332,
+              lng: 8.547511
+            },
+            infoText: '<strong>Marker 222222221</strong>'
+          },
+          {
+            position: {
+              lat: 47.374592,
+              lng: 8.548867
+            },
+            infoText: '<strong>Marker 2</strong>'
+          }, 
+          {
+            position: {
+              lat: 47.379592,
+              lng: 8.549867
+            },
+            infoText: '<strong>Marker 3</strong>'
+          }]
+        },
+        methods: {
+          toggleInfoWindow: function(marker, idx) {
+            this.infoWindowPos = marker.position;
+            this.infoOptions.content = marker.infoText;
+
+            //check if its the same marker that was selected if yes toggle
+            if (this.currentMidx == idx) {
+              this.infoWinOpen = !this.infoWinOpen;
+            }
+            //if different marker set infowindow to open and reset current marker index
+            else {
+              this.infoWinOpen = true;
+              this.currentMidx = idx;
+
+            }
+          }
+
+        }
+      });
+    });
+  </script>		
 	</template>
 </odoo>
