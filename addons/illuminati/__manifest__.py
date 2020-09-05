@@ -25,7 +25,6 @@
     # always loaded
     'data': [
         'views/views.xml',
-        'templates/views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
